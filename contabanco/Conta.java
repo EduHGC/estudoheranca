@@ -26,6 +26,12 @@ public abstract class Conta {
 		this.saldo = saldo;
 	}
 	
+	public void sacar(double valor) {
+		if(valor > this.saldo) {
+			this.saldo -= valor;
+		}
+	}
+	
 	public void deposito(double valor) {
 		this.saldo += valor;
 	}
